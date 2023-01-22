@@ -1,9 +1,13 @@
-# Personal portfolio
-Personal portfolio website
+# Gulp boilerplate
 
+## Intro
 
+En el siguiente documento se explica el proceso de instalación del entorno, el proceso de build y funcionamiento del entorno. Finalmente se explica como realizar varias tareas com 
 
-- [Personal portfolio](#personal-portfolio)
+## Tabla de contenidos
+- [Gulp boilerplate](#gulp-boilerplate)
+  - [Intro](#intro)
+  - [Tabla de contenidos](#tabla-de-contenidos)
     - [Requisitos](#requisitos)
   - [Instalación del entorno](#instalación-del-entorno)
     - [Instalación de entorno preconfigurado](#instalación-de-entorno-preconfigurado)
@@ -240,8 +244,7 @@ Todavía hay más, como habrás podido ver en el gulpfile hay una tarea más def
     <img src="src/data/readme-imgs/imageopt.jpg" width="800"/>
 </p>
 
-Esta tarea sirve para generar imagenes a partir de una configuración como la de abajo, generara imagenes de tamaños y formatos distintos. En el ejemplo se generarán 6 versiones de cada imagen, dos con terminación **-sm.avif** y **-md.avif**, dos con terminación **-sm.webp** y **-sm.webp**, y dos con **-sm.jpg** y **-md.jpg**. El tamaño de imagen sm equivaldría a 48em * 16 = 768px de ancho y md a 1040px. En el json se encuentra en ems ya que 
-se usa el mismo json para generar el html de la hui con la etiqueta de imagen de cada versión, ver más abajo.
+Esta tarea sirve para generar imagenes a partir de una configuración como la de abajo, generara imagenes de tamaños y formatos distintos. En el ejemplo se generarán 6 versiones de cada imagen, dos con terminación **-sm.avif** y **-md.avif**, dos con terminación **-sm.webp** y **-sm.webp**, y dos con **-sm.jpg** y **-md.jpg**. El tamaño de imagen sm equivaldría a 48em * 16 = 768px de ancho y md a 1040px. En el json se encuentra en ems ya que se usa el mismo json para generar el html de la hui con la etiqueta de imagen de cada versión, ver más abajo.
 
 <p align="center">
     <img src="src/data/readme-imgs/json.jpg" width="800"/>
