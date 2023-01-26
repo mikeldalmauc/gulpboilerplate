@@ -1,5 +1,5 @@
 
-# Intro
+# Día 1
 
 <p align="center">
     <img src="assets/lanbide/drumon.jpg" width="150"/>
@@ -32,5 +32,47 @@ Cuando hayas terminado, copia su código y pegalo antes de importar bootstrap en
 Vale, buena sesión, vamos a estirar las patas un poco y despejarnos con un cafecito novato
 sigue así!
 
-
 Hola otra vez novato, se me ha olvidado decirte pero deberías descubrir alguna forma de que podamos cambiar la paletad de colores de la interfaz y ver los cambios al momento.
+
+# Día 2
+
+## Preparación
+
+Descargar base de datos iris y copia el json que contiene en el proyecto, en una ubicación apropiada.
+
+https://drive.google.com/file/d/1lC6HwrAov4mBwJU0nsv0ugaAoZIvxFAz/view?usp=sharing
+https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris
+
+<p align="center">
+    <img src="assets/lanbide/Datos.jpg" width="450"/>
+</p>
+
+1. Creamos una nueva página copiando alguna de las que no son el index.
+   
+2. Modificamos el gulpfile, creamos un fichero html, sass y js y trabajaremos solo con estos 
+ficheros asi que queremos sean los unicos que considere gulp, el resto seguiran generados en el build y accesibles, pero los cambios no se verán reflejados
+
+3. Una vez terminado el paso anterior, cargamos la base de datos de Iris siguiendo la estrategia de cargar ficheros que ya hemos visto. 
+   1. Tip: Usa control + P y pon *.js, varios de los primero js sugeridos deberían implementar esta estrategia.
+   2. Comprueba con la herramienta para desarrolladores y el debugger de chrome que los datos se cargan.
+
+## Tarea
+
+1. La idea es crear una serie de componentes independientes, cada componente tendrá un modelo, una vista y una actualización.
+   
+2. Se crearán 4 componentes, por lo que se dividirá la pantalla en una malla de 50%,50% y dentro de cada sección iremos añadiendo los componentes.
+
+### Componente 1
+
+4. 
+
+5. 
+6. 
+Cargar la base de datos
+
+
+Buscamos scatterplot en esta librería
+https://d3js.org/
+https://observablehq.com/@d3/splom
+
+https://animejs.com/documentation/#gridAxisStaggering

@@ -1,0 +1,31 @@
+
+> test-repo@1.0.0 dev
+> gulp
+
+[17:14:47] Using gulpfile /workspaces/gulpboilerplate/gulpfile.js
+[17:14:47] Starting 'default'...
+[17:14:47] Starting 'scssTask'...
+[17:14:47] Starting 'jsTask'...
+[17:14:47] Starting 'htmlTask'...
+[Browsersync] Access URLs:
+ -----------------------------------
+       Local: http://localhost:3000
+    External: http://172.17.0.2:3000
+ -----------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ -----------------------------------
+[Browsersync] Serving files from: ./
+[Browsersync] Couldn't open browser (if you are using BrowserSync in a headless environment, you might want to set the open option to false)
+[Browsersync] Reloading Browsers...
+[Browsersync] 2 files changed (navbar.html, navbarorig.html)
+[17:15:16] Finished 'htmlTask' after 29 s
+[Browsersync] Reloading Browsers... (buffered 2 events)
+[Browsersync] 1 file changed (index.js)
+[17:15:22] Finished 'jsTask' after 35 s
+[Browsersync] 10 files changed (base.css.map, base.css, footer.css.map, footer.css, gallery.css.map, gallery.css, index.css.map, index.css, navbar.css.map, navbar.css)
+[17:15:22] Finished 'scssTask' after 35 s
+[17:15:22] Starting 'preventCachingTask'...
+[17:15:22] Finished 'preventCachingTask' after 11 ms
+[17:15:22] Starting 'watchTask'...
+[Browsersync] Reloading Browsers... (buffered 9 events)
