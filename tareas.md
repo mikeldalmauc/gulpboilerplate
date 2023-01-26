@@ -65,19 +65,18 @@ ficheros asi que queremos sean los unicos que considere gulp, el resto seguiran 
 2. Se crearán 4 componentes, por lo que se dividirá la pantalla en una malla de 50%,50% y dentro de cada sección iremos añadiendo los componentes.
 
 ### Componente 1
+Crear un componente que muestre la media de cada columna, pero separado por tipo de flor, el tipo irá en un dropdown y al cambiarlo se mostrarán las medias.
 
-4. 
+Tip: crea un modelo inicial para pruebas con lo necesario para 
+el componente. La inicialización a partir de la lista se hará más adelante.
+<p align="center">
+    <img src="assets/lanbide/comp1.jpg" width="450"/>
+</p>
 
-5. 
-6. 
-Cargar la base de datos
+#### Componente 1 plus
+Añade otros estadísticos a cada atributo tales como la moda o
+la desviacion típica.
+Estos estadísticos solo se mostrarán si se pulsa en el enlace ver más.
 
 
-Buscamos scatterplot en esta librería
-https://d3js.org/
-https://observablehq.com/@d3/splom
 
-https://animejs.com/documentation/#gridAxisStaggering
-=======
-Una cosa más, estaría bien si puedieras descubrir alguna forma de que podamos cambiar la paleta de colores de la interfaz y ver los cambios al momento.
->>>>>>> 28272b52bcb6951fa746bd35a7d313c1aa718977
