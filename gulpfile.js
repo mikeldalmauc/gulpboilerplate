@@ -13,9 +13,13 @@ const cssnano = require('cssnano');
 const fs = require('fs')
 
 const cssVersion = new Date().getTime();
-const sassFiles = 'src/sass/**/*.sass';
-const jsFiles = 'src/js/**/*.js';
+// const sassFiles = 'src/sass/**/*.sass';
+// const jsFiles = 'src/js/**/*.js';
+// const htmlFiles = 'src/html/**/*.html';
+const sassFiles = 'src/sass/iris.sass';
+const jsFiles = 'src/js/iris.js';
 const htmlFiles = 'src/html/**/*.html';
+
 const imageFiles = 'src/data/gallery/*.jpg';
 const processedImages = 'assets/**';
 const galleryConfig = JSON.parse(fs.readFileSync('src/data/galleryImages.json')).data;
@@ -48,7 +52,7 @@ const galleryConfig = JSON.parse(fs.readFileSync('src/data/galleryImages.json'))
 //         .pipe(dest('assets/gallery'));
 // }
 
-
+// sdsa
 browserSync.init({
     server: {
         baseDir: "./",

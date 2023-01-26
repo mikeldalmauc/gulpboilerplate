@@ -1,0 +1,32 @@
+.out
+  animation-name: out
+  animation-duration: 2s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+.in
+  animation-name: in
+  animation-duration: 5s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+@keyframes in
+  from 
+    transform: scale(0)
+    opacity: 0
+
+  to 
+    transform: scale(1)
+    opacity: 1
+
+@keyframes out
+  from 
+    transform: scale(1)
+    opacity: 1
+  60% 
+    transform: scale(1)
+    opacity: 1
+  to 
+    transform: scale(0)
+    opacity: 0
+
