@@ -8,14 +8,13 @@
 
 Muy buenas joven aprendiz,  de ahora en adelante seré tu maestro y lider técnico de este departamento, yo, Drumond Schofield. He estado hablando con el resto del equipo y hemos decidido asignarte una serie de tareas para que vayas familiarizandote con tu trabajo, ve a hablar con b primero y el te lo comentará con más detalle. 
 
-# Parte 1
-
 Hey, que tal, chic@ nuevo, si no recuerdo mal el otro día ya instalaste una versión del entorno, verdad?, confío en que esta vez serás capaz de sacar algo adelante. Bueno, si ya has lanzado el comando `npm install` deberías ser capaz de levantar el servidor con `gulp`y empezar a trabajar. 
 
-- Crea una nueva páginas de nombre buscador y referencialas desde el menu, comprueba que la nueva página funcione.
-- Integra en la pestaña buscador el código que habías desarrollado antes, para ello tendras que copiar el javascript, html y sass. 
+Necesitamos que termines de arreglar el menu, asegurarte de que funciona bien y responde a ditintas pantallas, luego, necesito que añadas algún elemento de bootstrap más, concretamente:
+- footer
+- Crea 2 nuevas páginas y referencialas desde el menu, llamalas contacto y buscador.
+- Integra en la pestaña buscador el código que habías desarrollado antes, para ello tendras que copiar el javascript, html y sass. Para los htmls, utiliza index.html como plantilla y cambia el contenido conservando el header.
 
-# Parte 2
 Hey, que tal, soy Amanda, la encargada de diseño, en esta tarea quiero poner a prueba tu sentido del estilo, utiliza la siguiente página para crear una paleta de colores, piensa en una paleta que nos represente, busca una buena proporción en las combinaciones, no tiene que ser la definitiva a si que tampoco le dediques demasiado!
 
 <p align="center">
@@ -30,7 +29,6 @@ Cuando hayas terminado, copia su código y pegalo antes de importar bootstrap en
 </p>
 
 
-<<<<<<< HEAD
 Vale, buena sesión, vamos a estirar las patas un poco y despejarnos con un cafecito novato
 sigue así!
 
@@ -64,19 +62,27 @@ ficheros asi que queremos sean los unicos que considere gulp, el resto seguiran 
    
 2. Se crearán 4 componentes, por lo que se dividirá la pantalla en una malla de 50%,50% y dentro de cada sección iremos añadiendo los componentes.
 
+Estrategia
+    1. La estrategia es dividir el modelo vista actualización en dos niveles, con un modelo vista actualización a nivel general
+    2. Un modelo vista actualización por cada componentes
+    3. Un init por componente
+    4. Una vista por componente
+    5. Una actualización por componente
+    
+
 ### Componente 1
-Crear un componente que muestre la media de cada columna, pero separado por tipo de flor, el tipo irá en un dropdown y al cambiarlo se mostrarán las medias.
+A partir de la 
+### Componente 2
 
-Tip: crea un modelo inicial para pruebas con lo necesario para 
-el componente. La inicialización a partir de la lista se hará más adelante.
-<p align="center">
-    <img src="assets/lanbide/comp1.jpg" width="450"/>
-</p>
+### Componente 3
 
-#### Componente 1 plus
-Añade otros estadísticos a cada atributo tales como la moda o
-la desviacion típica.
-Estos estadísticos solo se mostrarán si se pulsa en el enlace ver más.
+### Componente 4
 
 
 
+
+Buscamos scatterplot en esta librería
+https://d3js.org/
+https://observablehq.com/@d3/splom
+
+https://animejs.com/documentation/#gridAxisStaggering
