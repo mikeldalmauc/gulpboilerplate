@@ -41,7 +41,7 @@
 //       "title": ""
 //     },
 /*    */
-let modelo = {
+let gallery_modelo = {
   formats: [],
   breakpoints: [],
   images: [],
@@ -50,14 +50,14 @@ let modelo = {
 const imagesPath = "../assets/gallery/";
 
 // Se inicializa el modelo
-function init() {
+function gallery_init() {
   fetch(imagesPath+"galleryImages.json")
     .then((response) => response.json())
     .then((gallery) => {
-      modelo = gallery.data;
+      gallery_modelo = gallery.data;
 
       // Se llama a la vista por primera vez
-      view(modelo);
+      gallery_view(gallery_modelo);
     });
 }
 
@@ -72,22 +72,22 @@ function init() {
  *
  * @param {*} model
  */
-function view(model) {
+function gallery_view(gallery_model) {
   let gallery = document.getElementById("gallery");
   let ul = document.createElement("ul");
   gallery.appendChild(ul);
 
-  model.images
+  gallery_model.images
     .map((img) => img.name)
     .forEach((imageName) => {
       let li = document.createElement("li");
 
       let link = document.createElement("a");
-      link.href = defaultImageSourcePath(model, imageName);
+      link.href = defaultImageSourcePath(gallery_model, imageName);
       link.target = "_blank";
 
       // Se genera el html de la imagen
-      link.innerHTML = pictureView(model, imageName);
+      link.innerHTML = gallery_pictureView(gallery_model, imageName);
       li.appendChild(link);
       ul.append(li);
     });
@@ -116,14 +116,14 @@ function view(model) {
  * @param {*} filename 
  * @returns 
  */
-function pictureView(model, filename) {
+function gallery_pictureView(gallery_model, filename) {
   let path = buildImgPath(filename);
 
   return (
     "<picture>" +
-    model.formats
+    gallery_model.formats
       .map((f) =>
-        model.breakpoints.map(
+        gallery_model.breakpoints.map(
           (bp) =>
             "<source srcset='" +
             path +

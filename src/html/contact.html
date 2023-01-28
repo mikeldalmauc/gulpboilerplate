@@ -34,6 +34,7 @@
       $(function(){
         $("#includedContent").load("navbar.html"); 
         // $("#includedContent").load("build/navbarorig.html"); 
+        $(".md-divider").load("divider.html"); 
 
         $("#footer").load("footer.html"); 
       });
@@ -64,17 +65,13 @@
         </br>
         </br>
 
-              <!-- Divider -->
-      <div class="divider">
-        <svg class="icon" viewBox="0 0 50 50">
-            <use xlink:href="#emblem"></use>
-          </svg>
-      </div>
+              <!-- md-divider -->
+      <div class="md-divider"></div>
         No matter the question, here you can contact me and I will reply as soon as possible.
 
      <!-- primary content -->
         <form class="row g-4">
-        <!-- Divider -->
+        <!-- md-divider -->
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Email</label>
                 <input type="email" class="form-control" id="inputEmail4">

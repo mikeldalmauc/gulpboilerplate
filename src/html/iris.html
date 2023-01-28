@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="iris.css?v=1674402254700" />
 
     <script src="index.js?v=1674402254700"></script>
-
+    <script src='https://cdn.plot.ly/plotly-2.18.0.min.js'></script>
     <link
       href="../assets/fontawesome/css/all.css"
       rel="stylesheet"
@@ -36,8 +36,9 @@
         $("#includedContent").load("navbar.html"); 
         // $("#includedContent").load("build/navbarorig.html"); 
         $("#footer").load("footer.html");
-        
-        init(); 
+        $(".md-divider").load("divider.html"); 
+
+        iris_init(); 
 
       });
     </script> 
@@ -52,9 +53,13 @@
 
     <div id="grid-general">
       <div id="component1">
-
       </div>
-      <div id="component2"></div>
+      <div id="component2">
+        <div id="p1"></div>
+        <div id="p2"></div>
+        <div id="p3"></div>
+        <div id="p4"></div>
+      </div>
       <div id="component3"></div>
       <div id="component4"></div>
     </div>

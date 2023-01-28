@@ -1,0 +1,88 @@
+@use 'base' as *
+
+
+#test-results
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
+
+#test-results li
+    border-radius: 2px
+    margin:5px
+    min-width: 150px
+    max-width: 500px
+
+#test-results .t-succ
+    background-color: #00AA00
+
+#test-results .t-fail
+    background-color: #AA0000
+
+.mr-summary 
+    font-size: $base-font-size * 1.8
+
+.demo
+    position: relative
+    z-index: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    min-height: 200px
+    padding-top: 35px
+    border-bottom: 1px solid rgba(0,0,0,.65)
+    cursor: pointer
+
+.demo-content 
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    width: 290px
+    height: 100%
+
+.shadow 
+    position: absolute
+    opacity: .2
+
+
+.grid 
+    display: flex
+    flex-wrap: wrap
+                                                      
+.square, .circle 
+    pointer-events: none
+    position: relative
+    width: 28px
+    height: 28px
+    margin: 1px
+    background-color: #d6cdf8
+    font-size: 14px
+
+
+.small 
+    width: 18px
+    height: 18px
+
+.color-darkgreen, .color-staggering 
+    color: #00D672
+
+
+.tooltip-text 
+  visibility: hidden
+  position: absolute
+  z-index: 10
+  color: white
+  font-size: 12px
+  background-color: #151515
+  border-radius: 10px
+  padding: 10px 15px 10px 15px
+
+.t-fail:hover .tooltip-text , .t-fail.hover .tooltip-text 
+    visibility: visible
+
+.t-succ:hover .tooltip-text , .t-succ.hover .tooltip-text 
+    visibility: visible

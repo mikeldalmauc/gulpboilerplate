@@ -13,12 +13,12 @@ const cssnano = require('cssnano');
 const fs = require('fs')
 
 const cssVersion = new Date().getTime();
-// const sassFiles = 'src/sass/**/*.sass';
-// const jsFiles = 'src/js/**/*.js';
-// const htmlFiles = 'src/html/**/*.html';
-const sassFiles = 'src/sass/iris.sass';
-const jsFiles = 'src/js/iris.js';
+const sassFiles = 'src/sass/**/*.sass';
+const jsFiles = 'src/js/**/*.js';
 const htmlFiles = 'src/html/**/*.html';
+// const sassFiles = 'src/sass/iris.sass';
+// const jsFiles = 'src/js/iris.js';
+// const htmlFiles = 'src/html/iris.html';
 
 const imageFiles = 'src/data/gallery/*.jpg';
 const processedImages = 'assets/**';
@@ -72,7 +72,7 @@ function scssTask() {
 function jsTask() {
     return src(jsFiles)
         .pipe(concat('index.js')) // Combine all JS files together into index.js
-        .pipe(uglify()) // Obfuscate the code
+        // .pipe(uglify()) // Obfuscate the code
         .pipe(dest('build')) // Put everything in the build directory
         .pipe(browserSync.stream()); // Update the browser
 }
