@@ -2,7 +2,7 @@
 var gridAxisStaggering;
 var parent;
 /* 1.POP
- *      Dada una lista de objetos, devuelve el último
+ *      Dada una lista de objetos, devuelve el últff    imo
  * 
  *  ej:
  *  mr_ultimo([{nombre:"Aba", apellido:"Nos"}
@@ -273,12 +273,18 @@ function mr_init(){
 
 function mr_buttonTest(){
     parent = this;
-    const F = () => new Function(getCode());
-    eval(F(this));
-    const tests = test_data().tests.map(t => {
-        t.fun = parent[t.fun.name];
-        return t;
-    });
+
+    var tests = test_data().tests;
+
+    // var myName = "myName";
+    // var f = function () { return true; };
+    // Object.defineProperty(f, 'name', {value: myName, writable: false});
+
+    eval(getCode());
+    // const tests = test_data().tests.map(t => {
+    //     t.fun = parent[t.fun.name];
+    //     return t;
+    // });
     mr_test(false, tests);
 }
 
@@ -358,10 +364,10 @@ function mr_view(results){
         gridAxisStaggering = function() {  
             anime({
                 targets: '.staggering-axis-grid-demo .el',
-                translateX: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'x'}),
-                translateY: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'y'}),
-                rotateZ: anime.stagger([0, 90], {grid: [14, 5], from: 'center', axis: 'x'}),
-                delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
+                translateX: anime.stagger(10, {grid: [10, 10], from: 'center', axis: 'x'}),
+                translateY: anime.stagger(10, {grid: [10, 10], from: 'center', axis: 'y'}),
+                rotateZ: anime.stagger([0, 90], {grid: [10, 10], from: 'center', axis: 'x'}),
+                delay: anime.stagger(200, {grid: [10, 10], from: 'center'}),
                 easing: 'easeInOutQuad'
             });
         };
@@ -369,10 +375,10 @@ function mr_view(results){
         gridAxisStaggering =  function() {  
             anime({
             targets: '.staggering-axis-grid-demo .el',
-            translateX: anime.stagger(40, {grid: [14, 5], from: 'center', axis: 'x'}),
-            translateY: anime.stagger(40, {grid: [14, 5], from: 'center', axis: 'y'}),
-            rotateZ: anime.stagger([0, 360], {grid: [14, 5], from: 'center', axis: 'x'}),
-            delay: anime.stagger(300, {grid: [14, 5], from: 'center'}),
+            translateX: anime.stagger(100, {grid: [10, 10], from: 'center', axis: 'x'}),
+            translateY: anime.stagger(100, {grid: [10, 10], from: 'center', axis: 'y'}),
+            rotateZ: anime.stagger([0, 360], {grid: [10, 10], from: 'center', axis: 'x'}),
+            delay: anime.stagger(300, {grid: [10, 10], from: 'center'}),
             loop: true,
             direction: 'alternate',
             easing: 'easeInOutSine'

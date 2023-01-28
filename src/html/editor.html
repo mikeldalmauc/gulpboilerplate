@@ -1,204 +1,204 @@
 
 <pre id="editor">
-      /* 1.POP
-      *      Dada una lista de objetos, devuelve el último
-      * 
-      *  ej:
-      *  mr_ultimo([{nombre:"Aba", apellido:"Nos"}
-      *    ,{nombre:"Res", apellido:"Tos"}
-      *    ,{nombre:"Ser", apellido:"Pas"}]) 
-      * 
-      *  resultado:
-      *  {nombre:"Ser", apellido:"Pas"}
-      */
-     parent.mr_ultimo = (list) => {
-         // TODO
-     };
-     
-     /* 2.MAP
-             Dada una lista de objetos con nombres, devolver una lista 
-      *  de nombres.
-     *
-      *  ej:
-      *  mr_nombres([{nombre:"Aba", apellido:"Nos"}
-      *    ,{nombre:"Res", apellido:"Tos"}
-      *    ,{nombre:"Ser", apellido:"Pas"}]) 
-      * 
-      *  resultado:
-      *  ["Aba", "Res", "Ser"]
-      */
-     parent.mr_nombres =  (list) => {
-         // TODO
-     };
-     
-     /* 3.FILTER
-        Dada una lista de objetos, y un nombre,
-      * indicar si el hay algún objeto en la lista con dicho nombre.
-     
-      *  ej:
-      *  mr_existeNombre([{nombre:"Aba", apellido:"Nos"}
-      *    ,{nombre:"Res", apellido:"Tos"}
-      *    ,{nombre:"Ser", apellido:"Pas"}], "Res") 
-      * 
-      *  resultado:
-      *  True
-      */
-     parent.mr_existeNombre = (list, nombre) => {
-         // TODO
-     }
-     
-     /* 4. find Index
-             Dada una lista de objetos, y un apellido,
-      *  indicar si el hay algún objeto en la lista con dicho apellido.
-     
-      *  ej:
-      *  mr_existeApellido([{nombre:"Aba", apellido:"Nos"}
-      *    ,{nombre:"Res", apellido:"Tos"}
-      *    ,{nombre:"Ser", apellido:"Pas"}], "Nos") 
-      * 
-      *  resultado:
-      *  True
-      */
-     parent.mr_existeApellido = (list, apellido) => {
-         // TODO
-     }
-     
-     
-     /* 5.MAP 
-             Dada una lista de objetos con nombres y apellido
-      *  devolver una lista de nombres y appellido juntos
-     
-      *  ej:
-      *  mr_nombreCompleto([{nombre:"Aba", apellido:"Nos"}
-      *    ,{nombre:"Res", apellido:"Tos"}
-      *    ,{nombre:"Ser", apellido:"Pas"}]) 
-      * 
-      *  resultado:
-      *  ["Aba Nos", "Res Tos", "Ser Pas"]
-      */
-     parent.mr_nombreCompleto = (list) => {
-         // TODO
-     }
-     
-     /* 6.FILTER 
-             Dada una lista de objetos con un campo edad,
-         devolver solo aquellos con mas de 17 años
-      *  ej:
-      *  mr_mayoresDeEdad([{nombre:"Aba", edad:12}
-      *    ,{nombre:"Res", edad:18}
-      *    ,{nombre:"Ser", edad:55}]) 
-      * 
-      *  resultado:
-      *  [{nombre:"Res", edad:18}, {nombre:"Ser", edad:55}]
-      */
-     parent.mr_mayoresDeEdad = (list) => {
-         // TODO
-     }
-     
-     /* 7.FILTER y MAP.
-             Dada una lista de objetos con un campo edad,
-         devolver solo los nombres de aquellos con menos de 18 años
-      *  ej:
-      *  mr_menoresNombres([{nombre:"Aba", edad:12}
-      *    ,{nombre:"Res", edad:18}
-      *    ,{nombre:"Nen", edad:13}]) 
-      * 
-      *  resultado:
-      *  ["Aba", "Nen"]
-      */
-     parent.mr_menoresNombres = (list) => {
-         // TODO
-     }
-     
-     /* 8. REDUCE para sumar
-     *   Dada una lista de numeros, devolver la suma de todos
-     *  mr_sumarTodos([1, 5, -1, 0]) 
-     * 
-     *  resultado:
-     *  5
-     */
-     parent.mr_sumarTodos = (list) => {
-         // TODO
-     }
-     
-     /* 9. JOIN para unir
-     *   Dada una lista de strings, unirlos por comas
-     *  mr_commaSepratedValuesCSV(["Aba", "Res","Nen"])
-     
-     *  resultado:
-     *  ["Aba,Res,Nen"]
-     */
-     parent.mr_commaSepratedValuesCSV = (list) => {
-         // TODO
-     }
-     
-     /* 10. REDUCE para unir
-     *   Dada una lista de strings, unir por comas todos los que no empiezen por A
-     *  mr_commaSepratedValuesCSVFilter(["Aba", "Res","Nen"])
-     
-     *  resultado:
-     *  ["Res,Nen"]
-     */
-     parent.mr_commaSepratedValuesCSVFilter = (list) => {
-         // TODO
-     }
-     
-     
-     /* 11. SORT 
-     *   Dada una lista de numeros ordernarla de mayor a menor
-     *  mr_sortBS([2,5,4,7,8,2])
-     
-     *  resultado:
-     *  [8,7,5,4,2,2]
-     */
-     parent.mr_sortBS = (list) => {
-         // TODO
-     }
-     
-     /* 12. SORT AND INVERT
-     *   Dada una lista de numeros ordernarla de menor a mayor
-     *  mr_sortSB([2,5,4,7,8,2])
-     
-     *  resultado:
-     *  [2,2,4,5,7,8]
-     */
-     parent.mr_sortSB = (list) =>{
-         // TODO
-     }
-     
-     /* 13. SORT
-     *
-     *       Dada una lista de numeros ordernarla tal que 
-     *  los sietes, siempre estén delante, el resto no importa el orden
-     *   ([2,5,4,7,8,2])
-     
-     *  resultado:
-     *  [7,2,2,4,8,5]
-     */
-     parent.mr_sortSeven = (list) => {
-         // TODO
-     }
-     
-     
-     /* 14. REDUCE como alternativa al FOR
-     
-     *       Dada una lista de objetos, devolver un objeto que contenga
-     *   el numero de alumnos, la suma de las edades, la suma de las alturas,  
-     *   numero de rubios, numero de morenos y tipos de mascota distintos
-     *
-     * EJ:
-     *
-     *  contarDatos([{nombre:"Aba", edad:12, altura:130, pelo:"rubio", mascota:"perro"}
-     *    ,{nombre:"Res", edad:18, altura:140, pelo:"rubio", mascota:"gato" }
-     *    ,{nombre:"Ser", edad:13, altura:150, pelo:"moreno", mascota:""}]) 
-     *
-     *  resultado:
-     *  {alumnos:3, sumaEdades:43, sumaAlturas:420, rubios:2, morenos:1, mascotas:["perro", "gato"]}
-     */
-     parent.mr_contarDatos = (list) => {
-            // TODO
-     }
-        
+    /* 1.POP
+    *      Dada una lista de objetos, devuelve el últff    imo
+    * 
+    *  ej:
+    *  mr_ultimo([{nombre:"Aba", apellido:"Nos"}
+    *    ,{nombre:"Res", apellido:"Tos"}
+    *    ,{nombre:"Ser", apellido:"Pas"}]) 
+    * 
+    *  resultado:
+    *  {nombre:"Ser", apellido:"Pas"}
+    */
+   mr_ultimo = (list) => {
+       // TODO
+   };
+   
+   /* 2.MAP
+           Dada una lista de objetos con nombres, devolver una lista 
+    *  de nombres.
+   *
+    *  ej:
+    *  mr_nombres([{nombre:"Aba", apellido:"Nos"}
+    *    ,{nombre:"Res", apellido:"Tos"}
+    *    ,{nombre:"Ser", apellido:"Pas"}]) 
+    * 
+    *  resultado:
+    *  ["Aba", "Res", "Ser"]
+    */
+   mr_nombres =  (list) => {
+       // TODO
+   };
+   
+   /* 3.FILTER
+      Dada una lista de objetos, y un nombre,
+    * indicar si el hay algún objeto en la lista con dicho nombre.
+   
+    *  ej:
+    *  mr_existeNombre([{nombre:"Aba", apellido:"Nos"}
+    *    ,{nombre:"Res", apellido:"Tos"}
+    *    ,{nombre:"Ser", apellido:"Pas"}], "Res") 
+    * 
+    *  resultado:
+    *  True
+    */
+   mr_existeNombre = (list, nombre) => {
+       // TODO
+   }
+   
+   /* 4. find Index
+           Dada una lista de objetos, y un apellido,
+    *  indicar si el hay algún objeto en la lista con dicho apellido.
+   
+    *  ej:
+    *  mr_existeApellido([{nombre:"Aba", apellido:"Nos"}
+    *    ,{nombre:"Res", apellido:"Tos"}
+    *    ,{nombre:"Ser", apellido:"Pas"}], "Nos") 
+    * 
+    *  resultado:
+    *  True
+    */
+    mr_existeApellido = (list, apellido) => {
+       // TODO
+   }
+   
+   
+   /* 5.MAP 
+           Dada una lista de objetos con nombres y apellido
+    *  devolver una lista de nombres y appellido juntos
+   
+    *  ej:
+    *  mr_nombreCompleto([{nombre:"Aba", apellido:"Nos"}
+    *    ,{nombre:"Res", apellido:"Tos"}
+    *    ,{nombre:"Ser", apellido:"Pas"}]) 
+    * 
+    *  resultado:
+    *  ["Aba Nos", "Res Tos", "Ser Pas"]
+    */
+   mr_nombreCompleto = (list) => {
+       // TODO
+   }
+   
+   /* 6.FILTER 
+           Dada una lista de objetos con un campo edad,
+       devolver solo aquellos con mas de 17 años
+    *  ej:
+    *  mr_mayoresDeEdad([{nombre:"Aba", edad:12}
+    *    ,{nombre:"Res", edad:18}
+    *    ,{nombre:"Ser", edad:55}]) 
+    * 
+    *  resultado:
+    *  [{nombre:"Res", edad:18}, {nombre:"Ser", edad:55}]
+    */
+   mr_mayoresDeEdad = (list) => {
+       // TODO
+   }
+   
+   /* 7.FILTER y MAP.
+           Dada una lista de objetos con un campo edad,
+       devolver solo los nombres de aquellos con menos de 18 años
+    *  ej:
+    *  mr_menoresNombres([{nombre:"Aba", edad:12}
+    *    ,{nombre:"Res", edad:18}
+    *    ,{nombre:"Nen", edad:13}]) 
+    * 
+    *  resultado:
+    *  ["Aba", "Nen"]
+    */
+   mr_menoresNombres = (list) => {
+       // TODO
+   }
+   
+   /* 8. REDUCE para sumar
+   *   Dada una lista de numeros, devolver la suma de todos
+   *  mr_sumarTodos([1, 5, -1, 0]) 
+   * 
+   *  resultado:
+   *  5
+   */
+   mr_sumarTodos = (list) => {
+       // TODO
+   }
+   
+   /* 9. JOIN para unir
+   *   Dada una lista de strings, unirlos por comas
+   *  mr_commaSepratedValuesCSV(["Aba", "Res","Nen"])
+   
+   *  resultado:
+   *  ["Aba,Res,Nen"]
+   */
+   mr_commaSepratedValuesCSV = (list) => {
+       // TODO
+   }
+   
+   /* 10. REDUCE para unir
+   *   Dada una lista de strings, unir por comas todos los que no empiezen por A
+   *  mr_commaSepratedValuesCSVFilter(["Aba", "Res","Nen"])
+   
+   *  resultado:
+   *  ["Res,Nen"]
+   */
+   mr_commaSepratedValuesCSVFilter = (list) => {
+       // TODO
+   }
+   
+   
+   /* 11. SORT 
+   *   Dada una lista de numeros ordernarla de mayor a menor
+   *  mr_sortBS([2,5,4,7,8,2])
+   
+   *  resultado:
+   *  [8,7,5,4,2,2]
+   */
+   mr_sortBS = (list) => {
+       // TODO
+   }
+   
+   /* 12. SORT AND INVERT
+   *   Dada una lista de numeros ordernarla de menor a mayor
+   *  mr_sortSB([2,5,4,7,8,2])
+   
+   *  resultado:
+   *  [2,2,4,5,7,8]
+   */
+   mr_sortSB = (list) =>{
+       // TODO
+   }
+   
+   /* 13. SORT
+   *
+   *       Dada una lista de numeros ordernarla tal que 
+   *  los sietes, siempre estén delante, el resto no importa el orden
+   *   ([2,5,4,7,8,2])
+   
+   *  resultado:
+   *  [7,2,2,4,8,5]
+   */
+   mr_sortSeven = (list) => {
+       // TODO
+   }
+   
+   
+   /* 14. REDUCE como alternativa al FOR
+   
+   *       Dada una lista de objetos, devolver un objeto que contenga
+   *   el numero de alumnos, la suma de las edades, la suma de las alturas,  
+   *   numero de rubios, numero de morenos y tipos de mascota distintos
+   *
+   * EJ:
+   *
+   *  contarDatos([{nombre:"Aba", edad:12, altura:130, pelo:"rubio", mascota:"perro"}
+   *    ,{nombre:"Res", edad:18, altura:140, pelo:"rubio", mascota:"gato" }
+   *    ,{nombre:"Ser", edad:13, altura:150, pelo:"moreno", mascota:""}]) 
+   *
+   *  resultado:
+   *  {alumnos:3, sumaEdades:43, sumaAlturas:420, rubios:2, morenos:1, mascotas:["perro", "gato"]}
+   */
+   mr_contarDatos = (list) => {
+          // TODO
+   }
+
     </pre>
 
     <script src="../node_modules/ace-builds/src-noconflict/ace.js"></script>
