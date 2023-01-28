@@ -31,7 +31,7 @@ const mr_nombres =  (list) => {
     // TODO
 };
 
-/* 3.INDEXOF
+/* 3.FILTER
    Dada una lista de objetos, y un nombre,
  * indicar si el hay algún objeto en la lista con dicho nombre.
 
@@ -47,7 +47,7 @@ const mr_existeNombre = (list, nombre) => {
     // TODO
 }
 
-/* 4. FIND
+/* 4. find Index
         Dada una lista de objetos, y un apellido,
  *  indicar si el hay algún objeto en la lista con dicho apellido.
 
@@ -170,7 +170,7 @@ const mr_sortSB = (list) =>{
 *
 *       Dada una lista de numeros ordernarla tal que 
 *  los sietes, siempre estén delante, el resto no importa el orden
-*  mr_sortSeven([2,5,4,7,8,2])
+*   ([2,5,4,7,8,2])
 
 *  resultado:
 *  [7,2,2,4,8,5]
@@ -183,25 +183,27 @@ const mr_sortSeven = (list) => {
 /* 14. REDUCE como alternativa al FOR
 
 *       Dada una lista de objetos, devolver un objeto que contenga
-*   el numero de alumnos,
-*   la suma de las edades, 
-*   la suma de las alturas,  
-*   numero de rubios,
-*   numero de morenos
-*   tipos de mascota distintos
+*   el numero de alumnos, la suma de las edades, la suma de las alturas,  
+*   numero de rubios, numero de morenos y tipos de mascota distintos
 *
+* EJ:
 *
 *  contarDatos([{nombre:"Aba", edad:12, altura:130, pelo:"rubio", mascota:"perro"}
- *    ,{nombre:"Res", edad:18, altura:140, pelo:"rubio", mascota:"gato" }
- *    ,{nombre:"Ser", edad:13, altura:150, pelo:"moreno", mascota:""}]) 
-
+*    ,{nombre:"Res", edad:18, altura:140, pelo:"rubio", mascota:"gato" }
+*    ,{nombre:"Ser", edad:13, altura:150, pelo:"moreno", mascota:""}]) 
+*
 *  resultado:
 *  {alumnos:3, sumaEdades:43, sumaAlturas:420, rubios:2, morenos:1, mascotas:["perro", "gato"]}
 */
 const mr_contarDatos = (list) => {
-// TODO
+       // TODO
 }
 
+
+/**
+ * PRUEBAS 
+ * No cambiar
+ */
 function mr_test(){
     const numbers = [2,5,4,7,8,2,-1,22,666,12];
     const listNombres = [{nombre:"Aba", apellido:"Nos", edad:15}
@@ -231,8 +233,9 @@ function mr_test(){
     ,{data:[listNombres, "Chow"], res:false, fun: mr_existeApellido}
     ,{data:[listNombres], res:   ["Aba Nos", "Res Tos", "Ser Pas","Anh Kas","Tes Tos", "Win Dow","Fio Rdo"]
                                , fun: mr_nombreCompleto}
-    ,{data:[listNombres], res:listNombres, fun: mr_mayoresDeEdad}
-    ,{data:[listNombres], res:["Nos","Pas","Dow","Rdo"], fun: mr_menoresNombres}
+    ,{data:[listNombres], res:[{nombre:"Res", apellido:"Tos", edad:18},{nombre:"Anh", apellido:"Kas", edad:23} 
+                            ,{nombre:"Tes", apellido:"Tos", edad:24}], fun: mr_mayoresDeEdad}
+    ,{data:[listNombres], res:["Aba","Ser","Win","Fio"], fun: mr_menoresNombres}
     ,{data:[[1, 0, 500, 17, 123,-55] ], res:586, fun: mr_sumarTodos}
     ,{data:[["Nos","Pas","Dow","Rdo"]], res:"Nos,Pas,Dow,Rdo", fun: mr_commaSepratedValuesCSV}
     ,{data:[["Aos","Pas","Aow","Rdo"]], res:"Pas,Rdo", fun: mr_commaSepratedValuesCSVFilter}
@@ -248,7 +251,8 @@ function mr_test(){
     let results = 
     {
         list: tests.map(test => {
-            const result = test.data[0].length <2? test.fun(test.data[0]): test.fun(test.data[0], test.data[1]);
+            let dataC = JSON.parse(JSON.stringify(test.data));
+            const result = dataC.length <2? test.fun(dataC[0]): test.fun(dataC[0], dataC[1]);
 
             if(JSON.stringify(result) ==JSON.stringify(test.res)){
                 correct++;
@@ -281,7 +285,7 @@ function mr_view(results){
     let summary = document.createElement("div");
     summary.className = "mr-summary";
     summary.innerHTML = results.correct + "/" + results.total;
-
+    const all = results.correct ==results.total;
     // Animación
     container.append(summary);
 
@@ -294,26 +298,42 @@ function mr_view(results){
         const squares = $('.staggering-axis-grid-demo .el').length;
 
         $('.staggering-axis-grid-demo .el').each(function(index, element) {
-            if((results.correct> 0 && index/squares < results.correct/results.total) || results.correct==results.total){
+            if((results.correct> 0 && index/squares < results.correct/results.total) || all){
                 $( element ).css( "backgroundColor", "#00AA00");
             }else{
                 $( element ).css( "backgroundColor", "#AA0000");
             }
+            if(all)
+                $(element).css("filter","hue-rotate("+index*5+"deg)");
         });
     }); 
 
-
-    gridAxisStaggering = function() {  
-        anime({
+    if(!all){
+        gridAxisStaggering = function() {  
+            anime({
+                targets: '.staggering-axis-grid-demo .el',
+                translateX: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'x'}),
+                translateY: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'y'}),
+                rotateZ: anime.stagger([0, 90], {grid: [14, 5], from: 'center', axis: 'x'}),
+                delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
+                easing: 'easeInOutQuad'
+            });
+        };
+    }else{
+        gridAxisStaggering =  function() {  
+            anime({
             targets: '.staggering-axis-grid-demo .el',
-            translateX: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'x'}),
-            translateY: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'y'}),
-            rotateZ: anime.stagger([0, 90], {grid: [14, 5], from: 'center', axis: 'x'}),
-            delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
-            easing: 'easeInOutQuad'
-        });
-    };
-    
+            translateX: anime.stagger(40, {grid: [14, 5], from: 'center', axis: 'x'}),
+            translateY: anime.stagger(40, {grid: [14, 5], from: 'center', axis: 'y'}),
+            rotateZ: anime.stagger([0, 360], {grid: [14, 5], from: 'center', axis: 'x'}),
+            delay: anime.stagger(300, {grid: [14, 5], from: 'center'}),
+            loop: true,
+            direction: 'alternate',
+            easing: 'easeInOutSine'
+          });
+        };
+    }
+
 }
 
 function stagger(){
