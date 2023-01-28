@@ -1,5 +1,6 @@
 
 var gridAxisStaggering;
+var parent;
 /* 1.POP
  *      Dada una lista de objetos, devuelve el último
  * 
@@ -11,7 +12,7 @@ var gridAxisStaggering;
  *  resultado:
  *  {nombre:"Ser", apellido:"Pas"}
  */
-const mr_ultimo = (list) => {
+var mr_ultimo = (list) => {
     // TODO
 };
 
@@ -27,7 +28,7 @@ const mr_ultimo = (list) => {
  *  resultado:
  *  ["Aba", "Res", "Ser"]
  */
-const mr_nombres =  (list) => {
+var mr_nombres =  (list) => {
     // TODO
 };
 
@@ -43,7 +44,7 @@ const mr_nombres =  (list) => {
  *  resultado:
  *  True
  */
-const mr_existeNombre = (list, nombre) => {
+var mr_existeNombre = (list, nombre) => {
     // TODO
 }
 
@@ -59,7 +60,7 @@ const mr_existeNombre = (list, nombre) => {
  *  resultado:
  *  True
  */
-const mr_existeApellido = (list, apellido) => {
+var mr_existeApellido = (list, apellido) => {
     // TODO
 }
 
@@ -76,7 +77,7 @@ const mr_existeApellido = (list, apellido) => {
  *  resultado:
  *  ["Aba Nos", "Res Tos", "Ser Pas"]
  */
-const mr_nombreCompleto = (list) => {
+var mr_nombreCompleto = (list) => {
     // TODO
 }
 
@@ -91,7 +92,7 @@ const mr_nombreCompleto = (list) => {
  *  resultado:
  *  [{nombre:"Res", edad:18}, {nombre:"Ser", edad:55}]
  */
-const mr_mayoresDeEdad = (list) => {
+var mr_mayoresDeEdad = (list) => {
     // TODO
 }
 
@@ -106,7 +107,7 @@ const mr_mayoresDeEdad = (list) => {
  *  resultado:
  *  ["Aba", "Nen"]
  */
-const mr_menoresNombres = (list) => {
+var mr_menoresNombres = (list) => {
     // TODO
 }
 
@@ -117,7 +118,7 @@ const mr_menoresNombres = (list) => {
 *  resultado:
 *  5
 */
-const mr_sumarTodos = (list) => {
+var mr_sumarTodos = (list) => {
     // TODO
 }
 
@@ -128,7 +129,7 @@ const mr_sumarTodos = (list) => {
 *  resultado:
 *  ["Aba,Res,Nen"]
 */
-const mr_commaSepratedValuesCSV = (list) => {
+var mr_commaSepratedValuesCSV = (list) => {
     // TODO
 }
 
@@ -139,7 +140,7 @@ const mr_commaSepratedValuesCSV = (list) => {
 *  resultado:
 *  ["Res,Nen"]
 */
-const mr_commaSepratedValuesCSVFilter = (list) => {
+var mr_commaSepratedValuesCSVFilter = (list) => {
     // TODO
 }
 
@@ -151,7 +152,7 @@ const mr_commaSepratedValuesCSVFilter = (list) => {
 *  resultado:
 *  [8,7,5,4,2,2]
 */
-const mr_sortBS = (list) => {
+var mr_sortBS = (list) => {
     // TODO
 }
 
@@ -162,7 +163,7 @@ const mr_sortBS = (list) => {
 *  resultado:
 *  [2,2,4,5,7,8]
 */
-const mr_sortSB = (list) =>{
+var mr_sortSB = (list) =>{
     // TODO
 }
 
@@ -175,7 +176,7 @@ const mr_sortSB = (list) =>{
 *  resultado:
 *  [7,2,2,4,8,5]
 */
-const mr_sortSeven = (list) => {
+var mr_sortSeven = (list) => {
     // TODO
 }
 
@@ -195,16 +196,30 @@ const mr_sortSeven = (list) => {
 *  resultado:
 *  {alumnos:3, sumaEdades:43, sumaAlturas:420, rubios:2, morenos:1, mascotas:["perro", "gato"]}
 */
-const mr_contarDatos = (list) => {
+var mr_contarDatos = (list) => {
        // TODO
 }
 
+
+// However, you probably don't want to use eval(). Instead you might do something like:
+// Then use javascript to run it. At the simplest level you can just do:
+
+// grabbed from https://stackoverflow.com/questions/6432984/adding-script-element-to-the-dom-and-have-the-javascript-run
+// var script = document.createElement('script');
+// try {
+//   script.appendChild(document.createTextNode(code));
+//   document.body.appendChild(script);
+// } catch (e) {
+//   script.text = code;
+//   document.body.appendChild(script);
+// }
 
 /**
  * PRUEBAS 
  * No cambiar
  */
-function mr_test(){
+
+function test_data(){
     const numbers = [2,5,4,7,8,2,-1,22,666,12];
     const listNombres = [{nombre:"Aba", apellido:"Nos", edad:15}
                         ,{nombre:"Res", apellido:"Tos", edad:18}
@@ -225,25 +240,49 @@ function mr_test(){
         rubios:3, morenos:3, mascotas:["perro", "gato", "huron"]};
 
    const tests =  
-    [{data:[listNombres], res:listNombres[listNombres.length-1], fun:mr_ultimo}   
-    ,{data:[listNombres], res:["Aba", "Res", "Ser", "Anh", "Tes", "Win","Fio"],fun:mr_nombres}
-    ,{data:[listNombres, "Tes"], res:true, fun: mr_existeNombre}
-    ,{data:[listNombres, "Yos"], res:false, fun: mr_existeNombre}
-    ,{data:[listNombres, "Dow"], res:true, fun: mr_existeApellido}
-    ,{data:[listNombres, "Chow"], res:false, fun: mr_existeApellido}
-    ,{data:[listNombres], res:   ["Aba Nos", "Res Tos", "Ser Pas","Anh Kas","Tes Tos", "Win Dow","Fio Rdo"]
-                               , fun: mr_nombreCompleto}
-    ,{data:[listNombres], res:[{nombre:"Res", apellido:"Tos", edad:18},{nombre:"Anh", apellido:"Kas", edad:23} 
-                            ,{nombre:"Tes", apellido:"Tos", edad:24}], fun: mr_mayoresDeEdad}
-    ,{data:[listNombres], res:["Aba","Ser","Win","Fio"], fun: mr_menoresNombres}
-    ,{data:[[1, 0, 500, 17, 123,-55] ], res:586, fun: mr_sumarTodos}
-    ,{data:[["Nos","Pas","Dow","Rdo"]], res:"Nos,Pas,Dow,Rdo", fun: mr_commaSepratedValuesCSV}
-    ,{data:[["Aos","Pas","Aow","Rdo"]], res:"Pas,Rdo", fun: mr_commaSepratedValuesCSVFilter}
-    ,{data:[numbers], res:[666,22,12,8,7,5,4,2,2,-1], fun: mr_sortBS}    
-    ,{data:[numbers], res:[666,22,12,8,7,5,4,2,2,-1].reverse(), fun: mr_sortSB}    
-    ,{data:[numbers], res:[7,2,5,4,8,2,-1,22,666,12], fun: mr_sortSeven}
-    ,{data:[contarDatos], res:contarDatosRes, fun: mr_contarDatos}
+        [{data:[listNombres], res:listNombres[listNombres.length-1], fun:mr_ultimo}   
+        ,{data:[listNombres], res:["Aba", "Res", "Ser", "Anh", "Tes", "Win","Fio"],fun:mr_nombres}
+        ,{data:[listNombres, "Tes"], res:true, fun: mr_existeNombre}
+        ,{data:[listNombres, "Yos"], res:false, fun: mr_existeNombre}
+        ,{data:[listNombres, "Dow"], res:true, fun: mr_existeApellido}
+        ,{data:[listNombres, "Chow"], res:false, fun: mr_existeApellido}
+        ,{data:[listNombres], res:   ["Aba Nos", "Res Tos", "Ser Pas","Anh Kas","Tes Tos", "Win Dow","Fio Rdo"]
+                                , fun: mr_nombreCompleto}
+        ,{data:[listNombres], res:[{nombre:"Res", apellido:"Tos", edad:18},{nombre:"Anh", apellido:"Kas", edad:23} 
+                                ,{nombre:"Tes", apellido:"Tos", edad:24}], fun: mr_mayoresDeEdad}
+        ,{data:[listNombres], res:["Aba","Ser","Win","Fio"], fun: mr_menoresNombres}
+        ,{data:[[1, 0, 500, 17, 123,-55] ], res:586, fun: mr_sumarTodos}
+        ,{data:[["Nos","Pas","Dow","Rdo"]], res:"Nos,Pas,Dow,Rdo", fun: mr_commaSepratedValuesCSV}
+        ,{data:[["Aos","Pas","Aow","Rdo"]], res:"Pas,Rdo", fun: mr_commaSepratedValuesCSVFilter}
+        ,{data:[numbers], res:[666,22,12,8,7,5,4,2,2,-1], fun: mr_sortBS}    
+        ,{data:[numbers], res:[666,22,12,8,7,5,4,2,2,-1].reverse(), fun: mr_sortSB}    
+        ,{data:[numbers], res:[7,2,5,4,8,2,-1,22,666,12], fun: mr_sortSeven}
+        ,{data:[contarDatos], res:contarDatosRes, fun: mr_contarDatos}
     ];
+
+    return {numbers: numbers
+            ,listNombres: listNombres 
+            ,contarDatosRes: contarDatosRes 
+            ,tests: tests};
+}
+
+function mr_init(){
+    const tests = test_data().tests;
+    mr_test(true, tests);
+}
+
+function mr_buttonTest(){
+    parent = this;
+    const F = () => new Function(getCode());
+    eval(F(this));
+    const tests = test_data().tests.map(t => {
+        t.fun = parent[t.fun.name];
+        return t;
+    });
+    mr_test(false, tests);
+}
+
+function mr_test(isInit, tests){
 
     let correct = 0;
     let id = 1;
@@ -256,21 +295,25 @@ function mr_test(){
 
             if(JSON.stringify(result) ==JSON.stringify(test.res)){
                 correct++;
-                return {id: id++, t_name: test.fun.name, t_result:"t-succ", expected:test.res, result:result}
+                return {id: id++, t_name: test.fun.name, t_result:isInit?"":"t-succ", expected:test.res, result:result}
             }else{
-                return {id: id++, t_name: test.fun.name, t_result:"t-fail", expected:test.res, result:result}
+                return {id: id++, t_name: test.fun.name, t_result:isInit?"":"t-fail", expected:test.res, result:result}
             }})
     };
 
     results.total = tests.length;
     results.correct = correct;
-    
+    results.isInit = isInit;
+
     mr_view(results);
 }
 
 function mr_view(results){
+    
     // crear la lista
     let container = document.getElementById("test-results");
+    container.innerHTML = "<h1>RESULTADOS TEST</h1>";
+
     let ul = document.createElement("ol");
     ul.innerHTML = results.list
         .map(r =>
@@ -286,6 +329,7 @@ function mr_view(results){
     summary.className = "mr-summary";
     summary.innerHTML = results.correct + "/" + results.total;
     const all = results.correct ==results.total;
+    
     // Animación
     container.append(summary);
 
@@ -305,6 +349,8 @@ function mr_view(results){
             }
             if(all)
                 $(element).css("filter","hue-rotate("+index*5+"deg)");
+            if(results.isInit)
+                $( element ).css( "backgroundColor", "#d6cdf8");
         });
     }); 
 

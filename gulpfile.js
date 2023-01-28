@@ -16,9 +16,9 @@ const cssVersion = new Date().getTime();
 const sassFiles = 'src/sass/**/*.sass';
 const jsFiles = 'src/js/**/*.js';
 const htmlFiles = 'src/html/**/*.html';
-// const sassFiles = 'src/sass/iris.sass';
-// const jsFiles = 'src/js/iris.js';
-// const htmlFiles = 'src/html/iris.html';
+// const sassFiles = 'src/sass/problemasListas.sass';
+// const jsFiles = 'src/js/problemasListas.js';
+// const htmlFiles = 'src/html/problemasListas.html';
 
 const imageFiles = 'src/data/gallery/*.jpg';
 const processedImages = 'assets/**';

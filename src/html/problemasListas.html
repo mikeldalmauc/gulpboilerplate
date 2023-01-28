@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="index.css?v=1674402254700" />
     <link rel="stylesheet" href="navbar.css?v=1674402254700" />
     <link rel="stylesheet" href="footer.css?v=1674402254700" />
-    <link rel="stylesheet" href="metodoruso.css?v=1674402254700" />
+    <link rel="stylesheet" href="problemasListas.css?v=1674402254700" />
 
     <script src="index.js?v=1674402254700" onerror="alert('error de JavasScript mira la consola!')"></script>
-
+    
     <link
       href="../assets/fontawesome/css/all.css"
       rel="stylesheet"
@@ -37,29 +37,32 @@
         // $("#includedContent").load("build/navbarorig.html"); 
         $(".md-divider").load("divider.html"); 
         $("#footer").load("footer.html"); 
-        mr_test();
+        $("#editorContent").load("editor.html"); 
+
+        mr_init();
       });
     </script> 
-
   </head>
 
-  
   <body>
-    
+       
+      
     <header id="includedContent">
     </header>
 
+    <div class="divide2">
 
-    <div id="test-results">
-      <h1>RESULTADOS TEST</h1>
+      
+      <div id="editorContent">
+      </div>
+        
+      <button type="button" class="btn btn-primary" onclick="mr_buttonTest()">TEST</button>
+      <div id="test-results"></div>
     </div>
-
-
-
-
+    
     <footer id="footer" class="footer-md">
     </footer>
-
+    
   </body>
 
 </html>

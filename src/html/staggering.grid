@@ -1,0 +1,146 @@
+<div class="demo-content staggering-axis-grid-demo">
+    <div class="grid">
+      <div class="small square el" style="transform: translateX(-65px) translateY(-20px) rotateZ(-90deg);"></div>
+      <div class="small square el" style="transform: translateX(-55px) translateY(-20px) rotateZ(-76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(-45px) translateY(-20px) rotateZ(-62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(-35px) translateY(-20px) rotateZ(-48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(-25px) translateY(-20px) rotateZ(-34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(-15px) translateY(-20px) rotateZ(-20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(-5px) translateY(-20px) rotateZ(-6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(5px) translateY(-20px) rotateZ(6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(15px) translateY(-20px) rotateZ(20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(25px) translateY(-20px) rotateZ(34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(35px) translateY(-20px) rotateZ(48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(45px) translateY(-20px) rotateZ(62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(55px) translateY(-20px) rotateZ(76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(65px) translateY(-20px) rotateZ(90deg);"></div>
+      <div class="small square el" style="transform: translateX(-65px) translateY(-10px) rotateZ(-90deg);"></div>
+      <div class="small square el" style="transform: translateX(-55px) translateY(-10px) rotateZ(-76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(-45px) translateY(-10px) rotateZ(-62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(-35px) translateY(-10px) rotateZ(-48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(-25px) translateY(-10px) rotateZ(-34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(-15px) translateY(-10px) rotateZ(-20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(-5px) translateY(-10px) rotateZ(-6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(5px) translateY(-10px) rotateZ(6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(15px) translateY(-10px) rotateZ(20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(25px) translateY(-10px) rotateZ(34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(35px) translateY(-10px) rotateZ(48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(45px) translateY(-10px) rotateZ(62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(55px) translateY(-10px) rotateZ(76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(65px) translateY(-10px) rotateZ(90deg);"></div>
+      <div class="small square el" style="transform: translateX(-65px) translateY(0px) rotateZ(-90deg);"></div>
+      <div class="small square el" style="transform: translateX(-55px) translateY(0px) rotateZ(-76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(-45px) translateY(0px) rotateZ(-62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(-35px) translateY(0px) rotateZ(-48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(-25px) translateY(0px) rotateZ(-34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(-15px) translateY(0px) rotateZ(-20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(-5px) translateY(0px) rotateZ(-6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(5px) translateY(0px) rotateZ(6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(15px) translateY(0px) rotateZ(20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(25px) translateY(0px) rotateZ(34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(35px) translateY(0px) rotateZ(48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(45px) translateY(0px) rotateZ(62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(55px) translateY(0px) rotateZ(76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(65px) translateY(0px) rotateZ(90deg);"></div>
+      <div class="small square el" style="transform: translateX(-65px) translateY(10px) rotateZ(-90deg);"></div>
+      <div class="small square el" style="transform: translateX(-55px) translateY(10px) rotateZ(-76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(-45px) translateY(10px) rotateZ(-62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(-35px) translateY(10px) rotateZ(-48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(-25px) translateY(10px) rotateZ(-34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(-15px) translateY(10px) rotateZ(-20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(-5px) translateY(10px) rotateZ(-6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(5px) translateY(10px) rotateZ(6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(15px) translateY(10px) rotateZ(20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(25px) translateY(10px) rotateZ(34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(35px) translateY(10px) rotateZ(48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(45px) translateY(10px) rotateZ(62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(55px) translateY(10px) rotateZ(76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(65px) translateY(10px) rotateZ(90deg);"></div>
+      <div class="small square el" style="transform: translateX(-65px) translateY(20px) rotateZ(-90deg);"></div>
+      <div class="small square el" style="transform: translateX(-55px) translateY(20px) rotateZ(-76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(-45px) translateY(20px) rotateZ(-62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(-35px) translateY(20px) rotateZ(-48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(-25px) translateY(20px) rotateZ(-34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(-15px) translateY(20px) rotateZ(-20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(-5px) translateY(20px) rotateZ(-6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(5px) translateY(20px) rotateZ(6.92308deg);"></div>
+      <div class="small square el" style="transform: translateX(15px) translateY(20px) rotateZ(20.7692deg);"></div>
+      <div class="small square el" style="transform: translateX(25px) translateY(20px) rotateZ(34.6154deg);"></div>
+      <div class="small square el" style="transform: translateX(35px) translateY(20px) rotateZ(48.4615deg);"></div>
+      <div class="small square el" style="transform: translateX(45px) translateY(20px) rotateZ(62.3077deg);"></div>
+      <div class="small square el" style="transform: translateX(55px) translateY(20px) rotateZ(76.1538deg);"></div>
+      <div class="small square el" style="transform: translateX(65px) translateY(20px) rotateZ(90deg);"></div>
+    </div>
+    <div class="grid shadow">
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+      <div class="small square"></div>
+    </div>
+  </div>

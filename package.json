@@ -12,6 +12,7 @@
   "author": "Mikel Dalmau",
   "license": "ISC",
   "dependencies": {
+    "ace-builds": "^1.15.0",
     "autoprefixer": "^10.4.13",
     "bootstrap": "^5.3.0-alpha1",
     "browser-sync": "^2.27.11",

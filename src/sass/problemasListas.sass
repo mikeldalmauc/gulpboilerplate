@@ -1,5 +1,19 @@
 @use 'base' as *
 
+.divide2
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    
+#editor 
+    margin-bottom: 2em
+    margin-left: 2em
+    min-height: 80em
+    min-width: 70em
+    
+    position: relative
+
 
 #test-results
     display: flex
@@ -7,18 +21,20 @@
     justify-content: center
     flex-wrap: wrap
     align-items: center
-
+    margin-left: 1em
+    
 #test-results li
     border-radius: 2px
     margin:5px
     min-width: 150px
     max-width: 500px
+    background-color: #dcdcdcea
 
 #test-results .t-succ
-    background-color: #00AA00
+    background-color: #00aa00ee
 
 #test-results .t-fail
-    background-color: #AA0000
+    background-color: #aa0000ed
 
 .mr-summary 
     font-size: $base-font-size * 1.8
@@ -59,7 +75,7 @@
     width: 28px
     height: 28px
     margin: 1px
-    background-color: #d6cdf8
+    background-color: #dcdcdcea
     font-size: 14px
 
 
