@@ -84,6 +84,13 @@ function htmlTask(){
     .pipe(browserSync.stream());
 }
 
+// Copy required libraries from node modules
+function htmlTask(){
+    return src(htmlFiles)
+    .pipe(dest('build')) // Put everything in the build directory
+    .pipe(browserSync.stream());
+}
+
 function preventCachingTask() {
     // Looks in the index.html file for any files that have a 'v=' tag,
     // and updates the version number to prevent browsers from caching
@@ -109,7 +116,7 @@ function watchTask() {
 module.exports = {
     // imageOptimizerTask,
     default: series(
-        parallel(scssTask, jsTask, htmlTask),
+        parallel(scssTask, jsTask, htmlTask, ),
         preventCachingTask,
         watchTask
     )
