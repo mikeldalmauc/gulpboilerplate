@@ -223,7 +223,7 @@ var mr_contarDatos = (list) => {
  * Esta función crea todos los datos necesarios para ejecutar las pruebas
  * 
  * dentro de test están los datos para cada prueba, el valor esperado y la función a probar
- * 
+ * el resto de datos son redundantes ya que también están incluidos en la tabla de test
  * @returns Conjunto de datos de prueba
  * numbers: numbers, listNombres:listNombres, contarDatosRes:contarDatosRes, tests:tests
  */

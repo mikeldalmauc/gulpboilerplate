@@ -68,15 +68,13 @@ Estrategia
     3. Un init por componente
     4. Una vista por componente
     5. Una actualización por componente
-    
 
-### Componente 1
-A partir de la 
-### Componente 2
+# Día 3
 
-### Componente 3
+## Practica de Listas
 
-### Componente 4
+En el menu de la aplicación hay un nuevo menu de nombre listas.
+
 
 
 
