@@ -219,6 +219,14 @@ var mr_contarDatos = (list) => {
  * No cambiar
  */
 
+/**
+ * Esta función crea todos los datos necesarios para ejecutar las pruebas
+ * 
+ * dentro de test están los datos para cada prueba, el valor esperado y la función a probar
+ * 
+ * @returns Conjunto de datos de prueba
+ * numbers: numbers, listNombres:listNombres, contarDatosRes:contarDatosRes, tests:tests
+ */
 function test_data(){
     const numbers = [2,5,4,7,8,2,-1,22,666,12];
     const listNombres = [{nombre:"Aba", apellido:"Nos", edad:15}
@@ -295,10 +303,14 @@ function mr_test(isInit, tests){
 
     let results = 
     {
+        // Aqui se realizan las pruebas, antes de probar se copian los datos
+        // luego se actualiza el modelo de acuerdo al resultado.
         list: tests.map(test => {
+            // Copiamos datos
             let dataC = JSON.parse(JSON.stringify(test.data));
+            // Ejecutamos función con uno o dos parametros
             const result = dataC.length <2? test.fun(dataC[0]): test.fun(dataC[0], dataC[1]);
-
+            // Comparamos resultado y esperado
             if(JSON.stringify(result) ==JSON.stringify(test.res)){
                 correct++;
                 return {id: id++, t_name: test.fun.name, t_result:isInit?"":"t-succ", expected:test.res, result:result}
@@ -345,14 +357,19 @@ function mr_view(results){
     container.append(grid);
     $("#mr-grid").load("staggeringGrid.html", (callback) => {
                 
+        // Padre de los cuadrados, contiene todos los demas y podemos recorrerlos
+        // a partir de el
         const squares = $('.staggering-axis-grid-demo .el').length;
 
+        // Se colorea cada cuadrado como corresponda
         $('.staggering-axis-grid-demo .el').each(function(index, element) {
             if((results.correct> 0 && index/squares < results.correct/results.total) || all){
                 $( element ).css( "backgroundColor", "#00AA00");
             }else{
                 $( element ).css( "backgroundColor", "#AA0000");
             }
+            // Sea como sea arriba, en estos dos casos, reemplazamos el valor
+            // si se han acertado todas se van rotando colores, si es el estado inicial se usa un gris
             if(all)
                 $(element).css("filter","hue-rotate("+index*5+"deg)");
             if(results.isInit)
@@ -360,6 +377,10 @@ function mr_view(results){
         });
     }); 
 
+    // se definen dos animaciones usando la api de la librería, esto es,
+    // una función de la librería anime con unas especificaciones concretas
+    // el conjunto de posibilidades que nos ofrecen dichos parametros y funciones
+    // conforman una api.
     if(!all){
         gridAxisStaggering = function() {  
             anime({
