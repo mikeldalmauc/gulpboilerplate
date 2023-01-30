@@ -2,7 +2,7 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
-// const sharpResponsive = require("gulp-sharp-responsive");
+const sharpResponsive = require("gulp-sharp-responsive");
 const rename = require("gulp-rename");
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -24,33 +24,33 @@ const imageFiles = 'src/data/gallery/*.jpg';
 const processedImages = 'assets/**';
 const galleryConfig = JSON.parse(fs.readFileSync('src/data/galleryImages.json')).data;
 
-// function imageOptimizerTask(){
+function imageOptimizerTask(){
 
-//     const BREAKPOINTS = galleryConfig.breakpoints; 
+    const BREAKPOINTS = galleryConfig.breakpoints; 
 
-//     const bps = BREAKPOINTS.map(bp => [Math.round(bp.size*16), "-"+bp.name]);
+    const bps = BREAKPOINTS.map(bp => [Math.round(bp.size*16), "-"+bp.name]);
     
-//     // creates an array of [[1, "-xs"], [2, "-sm"], ... ] (obviously the values are 576/div etc)
+    // creates an array of [[1, "-xs"], [2, "-sm"], ... ] (obviously the values are 576/div etc)
 
-//     let formatOptions = {quality: galleryConfig.quality};
+    let formatOptions = {quality: galleryConfig.quality};
     
-//     return src(imageFiles)
-//         .pipe(rename(function (path) {
-//             path.dirname += "/" + path.basename;
-//         }))
-//         .pipe(sharpResponsive({
-//             formats: galleryConfig.formats.map(format => {
-//                 if("jpg" === format)
-//                     formatOptions = {quality: galleryConfig.quality, progressive:true};
-//                 else
-//                     formatOptions = {quality: galleryConfig.quality};
+    return src(imageFiles)
+        .pipe(rename(function (path) {
+            path.dirname += "/" + path.basename;
+        }))
+        .pipe(sharpResponsive({
+            formats: galleryConfig.formats.map(format => {
+                if("jpg" === format)
+                    formatOptions = {quality: galleryConfig.quality, progressive:true};
+                else
+                    formatOptions = {quality: galleryConfig.quality};
 
-//                 return bps.map(([width, suffix]) => ({ width, format: format, rename: { suffix }, formatOptions}));
-//             }
-//             ).flatMap(f => f)
-//         }))
-//         .pipe(dest('assets/gallery'));
-// }
+                return bps.map(([width, suffix]) => ({ width, format: format, rename: { suffix }, formatOptions}));
+            }
+            ).flatMap(f => f)
+        }))
+        .pipe(dest('assets/gallery'));
+}
 
 // sdsa
 browserSync.init({
@@ -114,7 +114,7 @@ function watchTask() {
 
 // Export everything to run when you run 'gulp'
 module.exports = {
-    // imageOptimizerTask,
+    imageOptimizerTask,
     default: series(
         parallel(scssTask, jsTask, htmlTask, ),
         preventCachingTask,
